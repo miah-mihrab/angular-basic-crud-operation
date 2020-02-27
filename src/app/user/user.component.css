@@ -1,0 +1,146 @@
+* {
+  font-family: 'Courier New', Courier, monospace
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 20px;
+  background-color: #1E1E1E;
+  min-height: 100vh;
+
+}
+
+.userDeleted {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: red;
+  font-size: 2rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ddd;
+  border-right: 0.5px solid #ddd;
+}
+
+.userInfo .user-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.userInfo .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.btn-delete {
+  background-color: rgb(228, 133, 10);
+  color: white;
+  transition: 0.3s all ease-in-out;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.btn-delete:hover {
+  background-color: rgb(170, 12, 12);
+  transform: translateY(-10px);
+}
+
+.personalInfo,
+.educationInfo,
+.professionInfo {
+  padding-bottom: 20px;
+}
+
+.personalInfo,
+.educationInfo {
+  border-bottom: 0.5px solid #ddd;
+}
+
+.updateInfo {
+  /* transform: translateY(10vw); */
+}
+
+.updateInfo-content {
+  margin-top: 10vw;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+form {
+  overflow: hidden;
+}
+
+.form-group {
+  padding-right: 50px;
+}
+
+input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #ddd9d9;
+  border: none;
+}
+
+.pre-job {
+  margin-top: 20px;
+}
+
+.btn-update {
+  float: right;
+  background-color: rgb(255, 145, 0);
+  color: white;
+  width: 150px;
+  transition: 0.3s all ease-in-out;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.btn-update:hover {
+  transform: translateY(-10px);
+}
+
+.alert {
+  color: red;
+}

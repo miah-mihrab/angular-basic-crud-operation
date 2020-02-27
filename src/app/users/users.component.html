@@ -1,0 +1,109 @@
+<div class="container">
+  <button class="btn btn-create" (click)="createUser()">Create User</button>
+
+  <div *ngIf="errors"></div>
+
+  <div *ngIf="newUser && submitted===false" class="newUser">
+    <form action="" #createUserForm="ngForm" (submit)="createNewUser(createUserForm)">
+      <h4 *ngIf="invalid" class="" style="color: rgb(216, 133, 8); text-align: center;">Please Fill All The Field
+      </h4>
+      <div class="form-group">
+        <input type="text" placeholder="ID" name="id" [ngModel]="nUser" required #id="ngModel" />
+        <div *ngIf="id.invalid && (id.dirty || id.touched)" class="alert alert-danger">
+          <div *ngIf="id.errors.required">
+            *ID is required.
+          </div>
+        </div>
+        <input type="text" placeholder="Name" name="name" [ngModel]="nUser" required minlength="3" #name="ngModel" />
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors.required || name.errors.minlength">
+            *Name is required. <br>
+            *Minimum length is 3.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Address" name="address" [ngModel]="nUser" required #address="ngModel" />
+        <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+          <div *ngIf="address.errors.required">
+            *Address is required.
+          </div>
+        </div>
+
+        <input type="text" placeholder="Mobile" name="mobile" [ngModel]="nUser" required minlength="11" maxlength="11"
+          #mobile="ngModel" />
+        <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="alert alert-danger">
+          <div *ngIf="mobile.errors.required || mobile.errors.minlength || mobile.errors.maxlength">
+            *Mobile is required. <br>
+            *Lengh should be exactly 11.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="High School" name="highSchool" [ngModel]="nUser" required
+          #highSchool="ngModel" />
+        <div *ngIf="highSchool.invalid && (highSchool.dirty || highSchool.touched)" class="alert alert-danger">
+          <div *ngIf="highSchool.errors.required">
+            *High School is required.
+          </div>
+        </div>
+
+        <input type="text" placeholder="University" name="university" [ngModel]="nUser" required
+          #university="ngModel" />
+        <div *ngIf="university.invalid && (university.dirty || university.touched)" class="alert alert-danger">
+          <div *ngIf="university.errors.required">
+            *University is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="Work Experience" name="workExperience" [ngModel]="nUser" required
+          #workExperience="ngModel" />
+        <div *ngIf="workExperience.invalid && (workExperience.dirty || workExperience.touched)"
+          class="alert alert-danger">
+          <div *ngIf="workExperience.errors.required">
+            *Work Experience is required.
+          </div>
+        </div>
+
+        <input type="text" placeholder="Previous Employer" name="previousEmployer" [ngModel]="nUser" required
+          #previousEmployer="ngModel" />
+        <div *ngIf=" previousEmployer.invalid && (previousEmployer.dirty || previousEmployer.touched)"
+          class="alert alert-danger">
+          <div *ngIf="previousEmployer.errors.required">
+            *Previous Employer is required.
+          </div>
+        </div>
+
+        <input type="text" placeholder="Previous Job" name="previousJob" [ngModel]="nUser" required
+          #previousJob="ngModel" />
+        <div *ngIf="
+            previousJob.invalid && (previousJob.dirty || previousJob.touched)
+          " class="alert alert-danger">
+          <div *ngIf="previousJob.errors.required">
+            *Previous Job is required.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-create" type="submit">Create</button>
+      <!-- <input type="submit"> -->
+    </form>
+  </div>
+
+  <!-- ALL USERS -->
+  <div class="all-users">
+    <div class="user" *ngFor="let user of users" [routerLink]="['/user', user.id]">
+      <div class="user-image">
+        <img
+          src="https://lh3.googleusercontent.com/_JN5TdAxJpwLrMp5jHr6r1SNX3dlgls57rQHSX87mUQyZFeWlzvIEvX7a_3_McQ1Jc1M1g=s85"
+          alt="User Image" />
+      </div>
+      <div class="user__basic__info">
+        <h5>{{ user.name }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

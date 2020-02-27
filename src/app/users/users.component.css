@@ -1,0 +1,141 @@
+* {
+  font-family: 'Courier New', Courier, monospace
+}
+
+.container {
+  background-color: #1F1A24;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.btn-create {
+  background-color: seagreen;
+  color: white;
+  transition: 0.3s all ease-in-out;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 1px 5px 0px rgba(88, 87, 87, 0.75);
+  background-color: rgb(73, 102, 85);
+}
+
+form {
+  margin-top: 30px !important;
+  width: 500px;
+  padding: 20px !important;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.form-group {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px; */
+  overflow: hidden;
+  padding-right: 50px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: 0.5px solid #dddddd;
+  outline: none;
+}
+
+form .btn {
+  width: 10vw !important;
+  font-size: 1rem;
+  float: right;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.all-users {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.user {
+  box-shadow: 0px 1px 5px 0px rgba(88, 87, 87, 0.75);
+  height: 20vw;
+  color: white;
+  position: relative;
+}
+
+.user .user-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+}
+
+img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+h5 {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0;
+  margin-top: 2%;
+}
+
+.user::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.user:hover::before {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  content: "Details";
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: rgba(22, 21, 21, 0.75);
+  cursor: pointer;
+  color: skyblue;
+
+}
+
+.alert {
+  color: red;
+  padding: 0 0 10px 0;
+}
